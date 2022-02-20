@@ -21,7 +21,7 @@ public class Aulas {
 
 	public Aulas() {
 
-		aulas = new ArrayList<Aula>();
+		aulas = new ArrayList<>();
 
 	}
 
@@ -46,7 +46,7 @@ public class Aulas {
 
 	private List<Aula> copiaProfundaAulas(List<Aula> aulas) {
 
-		List<Aula> copiaAulas = new ArrayList<Aula>();
+		List<Aula> copiaAulas = new ArrayList<>();
 
 		Iterator<Aula> it = aulas.iterator();
 
@@ -95,7 +95,7 @@ public class Aulas {
 
 	public List<String> representar() {
 
-		List<String> representacion = new ArrayList<String>();
+		List<String> representacion = new ArrayList<>();
 
 		Iterator<Aula> it = aulas.iterator();
 

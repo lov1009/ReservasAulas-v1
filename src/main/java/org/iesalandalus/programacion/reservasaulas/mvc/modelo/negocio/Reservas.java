@@ -72,6 +72,7 @@ public class Reservas {
 			throw new OperationNotSupportedException("ERROR: La reserva ya existe.");
 		}
 		reservas.add(new Reserva(reserva));
+		System.out.println("La reserva " + reserva + " se ha realizado correctamente.");
 	}
 
 	/*
@@ -90,6 +91,7 @@ public class Reservas {
 	 */
 
 	// TODO comparar primero año y luego mes
+	
 	private boolean esMesSiguienteOPosterior(Reserva reserva) {
 
 		if (reserva.getPermanencia().getDia().getYear() > LocalDate.now().getYear()) {
@@ -160,6 +162,7 @@ public class Reservas {
 			throw new OperationNotSupportedException("ERROR: La reserva a anular no existe.");
 		}
 		reservas.remove(new Reserva(reserva));
+		System.out.println("La reserva " + reserva + " se ha borrado con éxito.");
 	}
 
 	public List<String> representar() {

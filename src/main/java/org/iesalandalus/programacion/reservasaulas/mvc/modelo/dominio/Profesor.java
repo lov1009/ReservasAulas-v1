@@ -6,11 +6,7 @@ import java.util.regex.Pattern;
 
 public class Profesor {
 
-	/*
-	 * En la clase Profesor crea el método formateaNombre. Este método debe
-	 * normalizar un nombre eliminando caracteres en blanco de sobra y poniendo en
-	 * mayúsculas la primera letra de cada palabra y en minúsculas las demás.
-	 */
+	
 
 	private static final String ER_TELEFONO = "^[69][0-9]{8}$";
 	private static final String ER_CORREO = "^[a-z]+([a-z0-9\\-\\_\\.]*[a-z0-9])*+@([a-z]*\\.[a-z]{2,})+$";

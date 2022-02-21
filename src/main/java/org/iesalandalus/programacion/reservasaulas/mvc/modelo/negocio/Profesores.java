@@ -71,6 +71,7 @@ public class Profesores {
 			throw new OperationNotSupportedException("ERROR: Ya existe un profesor con ese nombre.");
 		}
 		profesores.add(new Profesor(profesor));
+		System.out.println("El profesor " + profesor.getNombre() + " se ha insertado correctamente.");
 
 	}
 
@@ -78,8 +79,9 @@ public class Profesores {
 		if (profesor == null) {
 			throw new NullPointerException("ERROR: No se puede buscar un profesor nulo.");
 		}
-		if (profesores.contains(profesor)) {
-			return new Profesor(profesor);
+		int indice = profesores.indexOf(profesor);
+		if (indice >= 0) {
+			return new Profesor(profesores.get(indice));
 		}
 		return null;
 	}
@@ -92,20 +94,22 @@ public class Profesores {
 			throw new OperationNotSupportedException("ERROR: No existe ningún profesor con ese nombre.");
 		}
 		profesores.remove(new Profesor(profesor));
+		System.out.println("El profesor " + profesor.getNombre() + " se ha eliminado con éxito.");
 	}
+	
 
 	public List<String> representar() {
 
 		List<String> representacion = new ArrayList<>();
-		
 		
 
 		Iterator<Profesor> it = profesores.iterator();
 
 		while (it.hasNext()) {
 			representacion.add(it.next().toString());
-
+			
 		}
+
 		return representacion;
 	}
 

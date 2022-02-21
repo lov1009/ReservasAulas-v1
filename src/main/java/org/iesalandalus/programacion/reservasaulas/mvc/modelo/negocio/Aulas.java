@@ -70,6 +70,7 @@ public class Aulas {
 			throw new OperationNotSupportedException("ERROR: Ya existe un aula con ese nombre.");
 		}
 		aulas.add(new Aula(aula));
+		System.out.println("El aula " + aula.getNombre() + " se ha insertado correctamente.");
 
 	}
 
@@ -91,8 +92,11 @@ public class Aulas {
 			throw new OperationNotSupportedException("ERROR: No existe ningún aula con ese nombre.");
 		}
 		aulas.remove(new Aula(aula));
+		System.out.println("El aula " + aula.getNombre() + " se ha eliminado con éxito.");
 	}
 
+
+	
 	public List<String> representar() {
 
 		List<String> representacion = new ArrayList<>();
